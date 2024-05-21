@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IDatabase } from "../types/IDatabase";
+import { IDatabase } from "../interfaces/IDatabase";
 import axios from "axios";
 import { ServerStatus } from "../enums/ServerStatus";
 

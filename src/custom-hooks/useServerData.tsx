@@ -1,22 +1,20 @@
 import { useEffect, useState } from "react";
 import { IDatabase } from "../types/IDatabase";
 import axios from "axios";
-import { baseUrl, serverRoutes } from "../constants/server";
-import { ServerStatus } from "../types/ServerStatus";
+import { ServerStatus } from "../enums/ServerStatus";
 
-export default function useServerData() {
-  const [serverStatus, setServerStatus] = useState<ServerStatus>('LOADING');
+export default function useServerData(fakeServerUrl: string) {
+  const [serverStatus, setServerStatus] = useState<ServerStatus>(ServerStatus.Loading);
   const [data, setData] = useState<IDatabase[]>([]);
 
   useEffect(() => {
-    const fakeServerUrl = baseUrl + serverRoutes.databases;
     axios.get<IDatabase[]>(fakeServerUrl)
       .then((response) => {
-        setServerStatus('WORKING');
+        setServerStatus(ServerStatus.Success);
         setData(response.data);
       })
       .catch(() => {
-        setServerStatus('NOT WORKING');
+        setServerStatus(ServerStatus.Error);
       });
   }, []);
   return { serverStatus, data };

@@ -1,4 +1,4 @@
 export const baseUrl = 'http://localhost:4000/';
-export const serverRoutes = {
-  databases: 'databases',
+export enum serverRoutes {
+  databases = 'databases',
 };

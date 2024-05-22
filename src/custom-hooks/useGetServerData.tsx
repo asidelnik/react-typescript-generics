@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { IDatabase } from "../interfaces/IDatabase";
 import axios from "axios";
 import { ServerStatus } from "../enums/ServerStatus";
 
-export default function useServerData(fakeServerUrl: string) {
+export default function useGetServerData<T>(fakeServerUrl: string) {
   const [serverStatus, setServerStatus] = useState<ServerStatus>(ServerStatus.Loading);
-  const [data, setData] = useState<IDatabase[]>([]);
+  const [data, setData] = useState<T[]>([]);
 
   useEffect(() => {
-    axios.get<IDatabase[]>(fakeServerUrl)
+    axios.get<T[]>(fakeServerUrl)
       .then((response) => {
         setServerStatus(ServerStatus.Success);
         setData(response.data);

@@ -1,5 +1,5 @@
 import { baseUrl, serverRoutes } from "../constants/routes";
-import useGetServerData from "../custom-hooks/useGetServerData";
+import useGetItems from "../custom-hooks/useGetItems";
 import { ServerStatus } from "../enums/ServerStatus";
 import GenericTable from "../shared/components/GenericTable";
 import { databaseFields } from "../constants/databaseFields";
@@ -7,11 +7,16 @@ import Modal from "../shared/components/Modal";
 import GenericForm from "../shared/components/GenericForm";
 import useModal from "../custom-hooks/useModal";
 import { IDatabase } from "../interfaces/IDatabase";
+import { useEffect } from "react";
 
 export default function DatabaseConnectionList() {
   const requestUrl = baseUrl + serverRoutes.databases;
-  const { serverStatus, data } = useGetServerData<IDatabase>(requestUrl);
+  const { serverStatus, data, getData } = useGetItems<IDatabase>(requestUrl);
   const { isOpen, toggleModal } = useModal();
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>

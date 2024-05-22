@@ -20,9 +20,15 @@ export interface IFormField {
   // value?: string;
 }
 
+export interface IItemDetails {
+  label: string;
+  name: string;
+}
+
 export interface IField {
   tableColumn?: ITableColumn;
   formField?: IFormField;
+  itemDetails?: IItemDetails;
 }
 
 export type FieldsData<T> = {

@@ -1,4 +1,4 @@
-import { ITableColumn } from "./IGenericTable";
+import { ITableColumn } from "./IGenericFields";
 import { IDataUnion } from "./IUnion";
 
 export interface IRowColumns {

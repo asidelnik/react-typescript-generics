@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+import axios, { AxiosResponse } from "axios";
 import { ServerStatus } from "../enums/ServerStatus";
 
-export default function useGetServerData<T>(fakeServerUrl: string) {
+export default function useGetItems<T>(fakeServerUrl: string) {
   const [serverStatus, setServerStatus] = useState<ServerStatus>(ServerStatus.Loading);
   const [data, setData] = useState<T[]>([]);
 
-  useEffect(() => {
+  function getData() {
     axios.get<T[]>(fakeServerUrl)
-      .then((response) => {
+      .then((response: AxiosResponse<T[]>) => {
         setServerStatus(ServerStatus.Success);
         setData(response.data);
       })
       .catch(() => {
         setServerStatus(ServerStatus.Error);
       });
-  }, []);
-  return { serverStatus, data };
+  }
+
+  return { serverStatus, data, getData };
 }

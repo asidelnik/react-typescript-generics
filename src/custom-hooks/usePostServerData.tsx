@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { ServerStatus } from "../enums/ServerStatus";
 import { IFormField } from "../interfaces/IGenericFields";
 
@@ -16,7 +16,7 @@ export default function usePostServerData<T>(formFields: IFormField[], requestUr
     });
 
     axios.post<T>(requestUrl, data)
-      .then((response) => {
+      .then((response: AxiosResponse<T>) => {
         setServerStatus(ServerStatus.Success);
       })
       .catch(() => {

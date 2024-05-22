@@ -1,4 +1,4 @@
-import { IFormField } from "./IGenericTable";
+import { IFormField } from "./IGenericFields";
 
 export interface IGenericFormFieldProps {
   field: IFormField;

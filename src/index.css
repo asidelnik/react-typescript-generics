@@ -35,13 +35,54 @@ h3 {
 button {
   padding: 10px 20px;
   border: none;
-  background-color: hsl(208, 100%, 50%);
-  color: white;
   border-radius: 5px;
   height: 40px;
   font-weight: bold;
   cursor: pointer;
 }
+
+button.primary {
+  background-color: hsl(208, 100%, 50%);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: hsl(208, 100%, 40%);
+}
+
+button.secondary {
+  background-color: hsl(208, 100%, 94%);
+  color: hsl(208, 100%, 46%);
+  border: 1px solid hsl(208, 100%, 46%);
+}
+
+button.secondary:hover {
+  background-color: hsl(208, 100%, 84%);
+}
+
+button.on-light-bg {
+  background-color: transparent;
+  color: hsl(208, 100%, 40%);
+  font-size: 22px;
+  border: 1px solid hsl(208, 100%, 46%);
+}
+
+button.on-light-bg:hover {
+  background-color: hsl(208, 100%, 74%);
+  color: hsl(208, 100%, 35%);
+}
+
+button.circle-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 main {
   padding: 25px;
@@ -66,13 +107,12 @@ main {
 table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  /* width: 100%; */
 }
 
 table td,
 table th {
   border: 1px solid #ddd;
-  padding: 8px 20px 8px 8px;
+  padding: 8px 40px 8px 10px;
 }
 
 table tr:nth-child(even) {
@@ -107,6 +147,7 @@ table th {
 .modal-content {
   background-color: white;
   max-width: 500px;
+  min-width: 445px;
   max-height: 90vh;
   overflow: auto;
   position: relative;
@@ -120,6 +161,7 @@ table th {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  column-gap: 20px;
   padding: 20px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -129,4 +171,35 @@ table th {
   padding: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+label {
+  display: block;
+  padding-block-end: 6px;
+}
+
+.password-field-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+
+.field-error-message {
+  color: red;
+  padding-block-end: 10px;
+  font-size: 0.7rem;
+}
+
+.field-error-placeholder {
+  height: 26.5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
 }

@@ -1,6 +1,6 @@
-import { FieldsData } from "./IGenericTable";
+import { FieldsData } from "./IGenericFields";
 import { IData, IDataUnion } from "./IUnion";
 
 export interface IGenericTableProps extends IData {
-  metaData: FieldsData<IDataUnion>;
+  fields: FieldsData<IDataUnion>;
 }

@@ -3,7 +3,12 @@ import { FieldsData } from '../interfaces/IGenericFields';
 import { inputValidation } from './validators';
 
 export const databaseFields: FieldsData<IDatabase> = {
-  id: {},
+  id: {
+    itemDetails: {
+      label: 'Id',
+      name: 'id',
+    },
+  },
   name: {
     tableColumn: {
       label: 'Name',
@@ -20,6 +25,10 @@ export const databaseFields: FieldsData<IDatabase> = {
       required: true,
       validator: inputValidation.english,
     },
+    itemDetails: {
+      label: 'Name',
+      name: 'name',
+    },
   },
   url: {
     formField: {
@@ -29,6 +38,10 @@ export const databaseFields: FieldsData<IDatabase> = {
       type: 'url',
       required: true,
       validator: inputValidation.url,
+    },
+    itemDetails: {
+      label: 'Url',
+      name: 'url',
     },
   },
   username: {
@@ -46,6 +59,10 @@ export const databaseFields: FieldsData<IDatabase> = {
       type: 'text',
       required: true,
       validator: inputValidation.english,
+    },
+    itemDetails: {
+      label: 'Username',
+      name: 'username',
     },
   },
   password: {
@@ -73,6 +90,10 @@ export const databaseFields: FieldsData<IDatabase> = {
       type: 'select',
       required: true,
       options: ['Snowflake', 'Trino', 'MySQL'],
+    },
+    itemDetails: {
+      label: 'Type',
+      name: 'type',
     },
   },
 };

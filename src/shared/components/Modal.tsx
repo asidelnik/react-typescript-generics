@@ -1,4 +1,6 @@
 import { IModalProps } from '../../interfaces/IModalProps';
+import { IoClose } from "react-icons/io5";
+
 
 export default function Modal({ isOpen, onRequestClose, modalTitle, children }: IModalProps) {
   if (!isOpen) return null;
@@ -8,7 +10,9 @@ export default function Modal({ isOpen, onRequestClose, modalTitle, children }: 
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <header className='modal-header'>
           <h3>{modalTitle}</h3>
-          <button onClick={onRequestClose}>x</button>
+          <button onClick={onRequestClose} className='on-light-bg circle-button'>
+            <IoClose />
+          </button>
         </header>
         <main className='modal-main'>
           {children}

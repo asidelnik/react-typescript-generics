@@ -22,13 +22,14 @@ code {
   justify-content: center;
   align-items: center;
   column-gap: 100px;
-  padding: 15px 25px;
-  background-color: aliceblue;
+  padding-block: 25px;
+  background-color: hsl(208, 100%, 94%);
 }
 
 h3 {
   padding: 0px;
   margin: 0px;
+  color: hsl(208, 100%, 40%);
 }
 
 button {
@@ -86,8 +87,8 @@ table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: hsl(208, 100%, 50%);
-  color: white;
+  background-color: hsl(208, 100%, 94%);
+  color: hsl(208, 100%, 40%);
 }
 
 .modal-overlay {
@@ -105,10 +106,27 @@ table th {
 
 .modal-content {
   background-color: white;
-  padding: 20px;
-  border-radius: 4px;
   max-width: 500px;
   max-height: 90vh;
   overflow: auto;
   position: relative;
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: hsl(208, 100%, 94%);
+  color: hsl(208, 100%, 40%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-main {
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

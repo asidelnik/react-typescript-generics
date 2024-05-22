@@ -23,9 +23,10 @@ export default function DatabaseConnectionList() {
           <button onClick={toggleModal} className="primary">Add +</button>
         </div>
         <div className="table-container">
-          {serverStatus === ServerStatus.Loading && <h4>Data loading...</h4>}
-          {serverStatus === ServerStatus.Success && <GenericTable fields={databaseFields} data={data} />}
-          {serverStatus === ServerStatus.Error && <h4>Server error</h4>}
+          {serverStatus === ServerStatus.Success ?
+            <GenericTable fields={databaseFields} data={data} /> :
+            <h4>{serverStatus === ServerStatus.Loading ? 'Data loading...' : 'Server error'}</h4>
+          }
         </div>
       </main>
 

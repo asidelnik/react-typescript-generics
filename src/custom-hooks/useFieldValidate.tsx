@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from "react";
-import { IFormField } from "../interfaces/IGenericTable";
+import { IFormField } from "../interfaces/IGenericFields";
 
 export default function useFieldValidate(field: IFormField) {
   const [value, setValue] = useState<string>('');

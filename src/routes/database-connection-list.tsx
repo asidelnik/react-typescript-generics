@@ -1,4 +1,4 @@
-import { baseUrl, serverRoutes } from "../constants/server";
+import { baseUrl, serverRoutes } from "../constants/routes";
 import useGetServerData from "../custom-hooks/useGetServerData";
 import { ServerStatus } from "../enums/ServerStatus";
 import GenericTable from "../shared/components/GenericTable";

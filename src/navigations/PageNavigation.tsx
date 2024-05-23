@@ -16,7 +16,7 @@ export default function PageNavigation() {
         <NavLink to={`/${pageName}/item-details`}
           className={Boolean(matchDetails) ? "active disabled-link" : "disabled-link"}
           onClick={e => e.preventDefault()}>
-          Item
+          Details
         </NavLink>
       </nav>
     </>

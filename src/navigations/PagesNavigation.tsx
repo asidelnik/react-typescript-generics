@@ -1,18 +1,18 @@
-import { NavLink, useLocation, useMatch } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { pageLinks } from "../constants/pageLinks";
+import { IPageLink } from "../constants/IPageLink";
 
 export default function PageNavigation() {
   const { pathname } = useLocation();
-  const pageName = pathname.split('/')[1];
-  const matchItems = useMatch(`/${pageName}/items`);
-  const matchDetails = useMatch(`/${pageName}/item-details/:id`);
 
   return (
     <>
       <nav className="side-nav darker">
-        {/* Map an array of pages to NavLink */}
-        <NavLink to={`/databases/items`}
-          className={Boolean(matchItems) || Boolean(matchDetails) ? "active" : ""}
-        >Databases</NavLink>
+        {pageLinks.map((page: IPageLink, index: number) => (
+          <NavLink key={index} to={`/${page.name}/items`}
+            className={pathname.includes(page.name) ? "active" : ""}
+          >{page.itemsLabel}</NavLink>
+        ))}
       </nav>
     </>
   )

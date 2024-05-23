@@ -4,6 +4,7 @@ import { ServerStatus } from "../../enums/ServerStatus";
 import { IGenericFormProps } from "../../interfaces/IGenericFormProps";
 import { IFormField } from "../../interfaces/IGenericFields";
 import GenericFormField from "./GenericFormField";
+import SmallSpinner from "./SmallSpinner";
 
 export default function GenericForm({ fields, requestUrl, onSubmitCloseModal }: IGenericFormProps) {
   const formFields: IFormField[] = Object.values(fields)
@@ -23,7 +24,10 @@ export default function GenericForm({ fields, requestUrl, onSubmitCloseModal }: 
     <>
       <form onSubmit={onSubmitHandler}>
         {formFields.map((field: IFormField) => <GenericFormField key={field.name} field={field} />)}
-        <button type="submit" className="primary">Submit</button>
+        <div className="submit-container">
+          <button type="submit" className="primary">Submit</button>
+          {serverStatus === ServerStatus.Submitted && <SmallSpinner />}
+        </div>
         {serverStatus === ServerStatus.Error && <p>Server error.</p>}
       </form>
     </>

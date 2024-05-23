@@ -8,6 +8,7 @@ export default function usePostServerData<T>(formFields: IFormField[], requestUr
 
   // Future better solution React Canary <form actions={}> with FormData
   function onSubmitHandler(e: React.FormEvent<HTMLFormElement>) {
+    setServerStatus(ServerStatus.Submitted);
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const data: any = {};

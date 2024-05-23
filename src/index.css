@@ -290,6 +290,13 @@ select {
   margin-bottom: 6px;
 }
 
+.submit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
 .item-details {
   display: flex;
   flex-direction: column;
@@ -328,6 +335,10 @@ select {
   padding-block-start: 200px;
 }
 
+.small-spinner-outer {
+  padding-block-start: 0px;
+}
+
 .spinner-inner {
   border: 8px solid hsl(0, 0%, 86%);
   border-radius: 50%;
@@ -335,4 +346,20 @@ select {
   width: 80px;
   height: 80px;
   animation: spin 2s linear infinite;
+}
+
+.small-spinner-inner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid hsl(0, 0%, 86%);
+  border-top: 5px solid hsl(212, 100%, 48%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

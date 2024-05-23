@@ -8,6 +8,7 @@ import GenericForm from "../shared/components/GenericForm";
 import useModal from "../custom-hooks/useModal";
 import { IDatabase } from "../interfaces/IDatabase";
 import { useEffect } from "react";
+import Spinner from "../shared/components/Spinner";
 
 export default function DatabaseConnectionList() {
   const requestUrl = baseUrl + serverRoutes.databases;
@@ -20,9 +21,6 @@ export default function DatabaseConnectionList() {
 
   return (
     <>
-      <header className="list-header">
-        <h3>Database connections list</h3>
-      </header>
       <main>
         <div className="button-container">
           <button onClick={toggleModal} className="primary">Add +</button>
@@ -30,7 +28,7 @@ export default function DatabaseConnectionList() {
         <div className="table-container">
           {serverStatus === ServerStatus.Success ?
             <GenericTable fields={databaseFields} data={data} /> :
-            <h4>{serverStatus === ServerStatus.Loading ? 'Data loading...' : 'Server error'}</h4>
+            <h4>{serverStatus === ServerStatus.Loading ? <Spinner /> : 'Server error'}</h4>
           }
         </div>
       </main>

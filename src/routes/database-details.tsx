@@ -6,20 +6,21 @@ import { ServerStatus } from "../enums/ServerStatus";
 import useGetItems from "../custom-hooks/useGetItems";
 import GenericItemDetails from "../shared/components/GenericItemDetails";
 import { databaseFields } from "../constants/databaseFields";
+import Spinner from "../shared/components/Spinner";
 
 export default function DatabaseDetails() {
-  const { databaseId } = useParams<{ databaseId: string }>();
-  const requestUrl = baseUrl + serverRoutes.databaseDetails + databaseId;
+  const { id } = useParams<{ id: string }>();
+  const requestUrl = baseUrl + serverRoutes.databaseDetails + id;
+
   const { serverStatus, data, getData } = useGetItems<IDatabase>(requestUrl);
   useEffect(() => { getData() }, [])
 
   return (
     <>
-      <h3>Database details</h3>
       {
         serverStatus === ServerStatus.Success ?
           <GenericItemDetails fields={databaseFields} data={data[0]} /> :
-          <h4>{serverStatus === ServerStatus.Loading ? 'Data loading...' : 'Server error'}</h4>
+          <h4>{serverStatus === ServerStatus.Loading ? <Spinner /> : 'Server error'}</h4>
       }
     </>
   )

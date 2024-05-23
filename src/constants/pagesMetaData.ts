@@ -123,9 +123,8 @@ export const pagesMetaData: IPageMetaData[] = [
           label: 'Database Id',
           name: 'databaseId',
           order: 1,
-          type: 'text',
+          type: 'number',
           required: true,
-          validator: inputValidation.number,
         },
         itemDetails: {
           label: 'Database Id',
@@ -196,9 +195,8 @@ export const pagesMetaData: IPageMetaData[] = [
           label: 'Table Id',
           name: 'tableId',
           order: 1,
-          type: 'text',
+          type: 'number',
           required: true,
-          validator: inputValidation.number,
         },
         itemDetails: {
           label: 'Table Id',

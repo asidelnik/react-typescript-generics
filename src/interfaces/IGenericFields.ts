@@ -12,7 +12,7 @@ export interface IFormField {
   label: string;
   name: string;
   order: number;
-  type: 'text' | 'select' | 'password' | 'url';
+  type: 'text' | 'select' | 'password' | 'url' | 'number';
   required: boolean;
   validator?: IValidator;
   options?: Array<string | number>;

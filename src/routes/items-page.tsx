@@ -12,8 +12,7 @@ import { useParams } from "react-router-dom";
 import { pagesMetaData } from "../constants/pagesMetaData";
 import ErrorPage from "./error-page";
 
-// ItemsPage
-export default function DatabaseConnectionList() {
+export default function ItemsPage() {
   const { page } = useParams<{ page: string }>();
   const selectedPage = pagesMetaData.find(p => p.name === page);
   const requestUrl = selectedPage ? baseUrl + selectedPage?.getItemsUrl : '';

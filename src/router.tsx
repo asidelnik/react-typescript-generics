@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import DatabaseDetails from "./routes/database-details";
-import DatabaseConnectionList from "./routes/database-connection-list";
+import DetailsPage from "./routes/details-page";
+import ItemsPage from "./routes/items-page";
 import ErrorPage from "./routes/error-page";
 import PagesLayout from "./layouts/PagesLayout";
 import PageLayout from "./layouts/PageLayout";
@@ -17,12 +17,12 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "items",
-            element: <DatabaseConnectionList />,
+            element: <ItemsPage />,
             errorElement: <ErrorPage />,
           },
           {
             path: "item-details/:id",
-            element: <DatabaseDetails />,
+            element: <DetailsPage />,
             errorElement: <ErrorPage />,
           },
           {

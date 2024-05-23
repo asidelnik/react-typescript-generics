@@ -8,8 +8,7 @@ import Spinner from "../shared/components/Spinner";
 import { pagesMetaData } from "../constants/pagesMetaData";
 import { IDataUnion } from "../interfaces/IUnion";
 
-// DetailsPage
-export default function DatabaseDetails() {
+export default function DetailsPage() {
   const { page, id } = useParams<{ page: string, id: string }>();
   const selectedPage = pagesMetaData.find(p => p.name === page);
   const requestUrl = selectedPage ? baseUrl + selectedPage?.getItemDetailsUrl + id : '';

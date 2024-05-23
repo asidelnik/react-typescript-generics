@@ -295,7 +295,7 @@ select {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  row-gap: 15px;
+  row-gap: 25px;
   width: 445px;
   background-color: hsl(208, 100%, 94%);
   border: 1px solid hsl(208, 100%, 46%);
@@ -305,6 +305,7 @@ select {
 
 .item-details .label {
   font-weight: bold;
+  padding-block-end: 6px;
   margin: 0px;
 }
 .item-details .value {

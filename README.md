@@ -1,4 +1,13 @@
 # Velotix - Front-End Developer Interview Task
+
+## Generic table & form components
+### Dev tasks to add a page:
+
+1. Add an **interface** with the **page's fields** (like IDatabase)
+2. Add the interface to the **IDataUnion** interface in the IUnion.ts file
+3. Add a **page object** to the **pagesMetaData** array in the pagesMetaData.ts file
+
+
 ## Database Connection Manager
 
 This is a sample project for managing database connections. It consists of a React-based front-end application and a fake-server to mock backend functionality.

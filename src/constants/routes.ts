@@ -5,5 +5,5 @@ export enum serverRoutes {
 }
 
 export enum clientRoutes {
-  databaseDetails = 'database-details',
+  databaseDetails = 'item-details',
 }

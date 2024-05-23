@@ -4,7 +4,7 @@ export default function ErrorPage() {
   return (
     <>
       <h3>Error page</h3>
-      <Link to="/">Go to home page</Link>
+      <Link to="/">Return to home page</Link>
     </>
   )
 }

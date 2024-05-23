@@ -1,13 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { IRowColumns } from "../../interfaces/IRowColumns";
 import { clientRoutes } from "../../constants/routes";
 
 export default function RowColumns({ rowData, columns }: IRowColumns) {
   const navigate = useNavigate();
   const dataRows: Array<string | number> = columns.map(c => rowData[c.name])
+  const { pathname } = useLocation();
+  const firstPath = pathname.split('/')[1];
 
   function handleRowClick() {
-    navigate(`${clientRoutes.databaseDetails}/${rowData.id}`);
+    const path = `/${firstPath}/${clientRoutes.databaseDetails}/${rowData.id}`;
+    navigate(path);
   }
 
   return (

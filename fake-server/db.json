@@ -50,21 +50,21 @@
       "id": 1,
       "tableId": 1,
       "name": "Column 1",
-      "dataType": "INTEGER",
+      "dataType": "int",
       "description": "This is column 1."
     },
     {
       "id": 2,
       "tableId": 2,
       "name": "Column 2",
-      "dataType": "INTEGER",
+      "dataType": "int",
       "description": "This is column 2."
     },
     {
       "id": 3,
       "tableId": 3,
       "name": "Column 3",
-      "dataType": "INTEGER",
+      "dataType": "int",
       "description": "This is column 3."
     }
   ]

@@ -9,7 +9,7 @@ export default function RowColumns({ rowData, columns }: IRowColumns) {
   const firstPath = pathname.split('/')[1];
 
   function handleRowClick() {
-    const path = `/${firstPath}/${clientRoutes.databaseDetails}/${rowData.id}`;
+    const path = `/${firstPath}/${clientRoutes.details}/${rowData.id}`;
     navigate(path);
   }
 

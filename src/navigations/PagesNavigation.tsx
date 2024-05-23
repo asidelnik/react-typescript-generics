@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { pageLinks } from "../constants/pageLinks";
-import { IPageLink } from "../constants/IPageLink";
+import { pagesMetaData } from "../constants/pagesMetaData";
+import { IPageMetaData } from "../interfaces/IPageMetaData";
 
 export default function PageNavigation() {
   const { pathname } = useLocation();
@@ -8,7 +8,7 @@ export default function PageNavigation() {
   return (
     <>
       <nav className="side-nav darker">
-        {pageLinks.map((page: IPageLink, index: number) => (
+        {pagesMetaData.map((page: IPageMetaData, index: number) => (
           <NavLink key={index} to={`/${page.name}/items`}
             className={pathname.includes(page.name) ? "active" : ""}
           >{page.itemsLabel}</NavLink>

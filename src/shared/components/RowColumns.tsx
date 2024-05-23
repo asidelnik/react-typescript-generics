@@ -16,7 +16,12 @@ export default function RowColumns({ rowData, columns }: IRowColumns) {
   return (
     <>
       <tr onClick={handleRowClick}>
-        {dataRows.map((column: number | string) => <td key={rowData.id + '-' + column}>{column}</td>)}
+        {dataRows.map((column: number | string, index: number) => {
+          return (
+            <td key={rowData.id + '-' + column} className={index === 0 ? 'table-link' : ''}>
+              {column}
+            </td>)
+        })}
       </tr>
     </>
   )

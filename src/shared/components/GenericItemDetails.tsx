@@ -8,14 +8,16 @@ export default function GenericItemDetails({ fields, data }: IGenericItemDetails
 
   return (
     <>
-      {itemFields.map(field => {
-        return (
-          <div key={field.name}>
-            <p>{field.label}</p>
-            <p>{data[field.name]}</p>
-          </div>
-        )
-      })}
+      <section className="item-details">
+        {itemFields.map(field => {
+          return (
+            <div key={field.name}>
+              <p className="label">{field.label}</p>
+              <p className="value">{data[field.name]}</p>
+            </div>
+          )
+        })}
+      </section>
     </>
   )
 }

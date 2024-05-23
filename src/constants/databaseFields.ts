@@ -14,8 +14,6 @@ export const databaseFields: FieldsData<IDatabase> = {
       label: 'Name',
       name: 'name',
       order: 1,
-      format: 'string',
-      isShown: true,
     },
     formField: {
       label: 'Name',
@@ -49,8 +47,6 @@ export const databaseFields: FieldsData<IDatabase> = {
       label: 'Username',
       name: 'username',
       order: 2,
-      format: 'string',
-      isShown: true,
     },
     formField: {
       label: 'Username',
@@ -80,8 +76,6 @@ export const databaseFields: FieldsData<IDatabase> = {
       label: 'Type',
       name: 'type',
       order: 3,
-      format: 'string',
-      isShown: true,
     },
     formField: {
       label: 'Type',

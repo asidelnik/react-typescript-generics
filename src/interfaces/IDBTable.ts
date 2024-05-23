@@ -1,7 +1,7 @@
 export interface IDBTable {
   [key: string]: string | number;
   id: number;
-  database_id: number;
+  databaseId: number;
   name: string;
   description: string;
 }

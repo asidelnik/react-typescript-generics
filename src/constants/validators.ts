@@ -14,4 +14,8 @@ export const inputValidation: IValidation = {
     pattern: 'https?://.+',
     message: 'Please enter a correct url.',
   },
+  number: {
+    pattern: '[0-9]+',
+    message: 'Numbers only.',
+  },
 };

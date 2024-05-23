@@ -28,19 +28,19 @@
   "tables": [
     {
       "id": 1,
-      "database_id": 1,
+      "databaseId": 1,
       "name": "Table 1",
       "description": "This is table 1."
     },
     {
       "id": 2,
-      "database_id": 2,
+      "databaseId": 2,
       "name": "Table 2",
       "description": "This is table 2."
     },
     {
       "id": 3,
-      "database_id": 3,
+      "databaseId": 3,
       "name": "Table 3",
       "description": "This is table 3."
     }
@@ -48,23 +48,23 @@
   "columns": [
     {
       "id": 1,
-      "table_id": 1,
+      "tableId": 1,
       "name": "Column 1",
-      "data_type": "INTEGER",
+      "dataType": "INTEGER",
       "description": "This is column 1."
     },
     {
       "id": 2,
-      "table_id": 2,
+      "tableId": 2,
       "name": "Column 2",
-      "data_type": "INTEGER",
+      "dataType": "INTEGER",
       "description": "This is column 2."
     },
     {
       "id": 3,
-      "table_id": 3,
+      "tableId": 3,
       "name": "Column 3",
-      "data_type": "INTEGER",
+      "dataType": "INTEGER",
       "description": "This is column 3."
     }
   ]

@@ -5,8 +5,7 @@ export interface ITableColumn {
   name: string;
   order: number;
   // isSortable: boolean;
-  format: 'string' | 'date' | 'currency' | 'decimal' | 'isActive';
-  isShown: boolean;
+  // format: 'string' | 'date' | 'currency' | 'decimal' | 'isActive';
 }
 
 export interface IFormField {

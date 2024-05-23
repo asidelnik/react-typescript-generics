@@ -26,6 +26,11 @@ export default function ItemsPage() {
     };
   }, [requestUrl]);
 
+  function onSubmitCloseModal() {
+    toggleModal();
+    getData(requestUrl);
+  }
+
   return (
     <>
       {selectedPage && serverStatus === ServerStatus.Success ? (
@@ -40,7 +45,7 @@ export default function ItemsPage() {
           </main>
 
           <Modal isOpen={isOpen} onRequestClose={toggleModal} modalTitle={selectedPage.addLabel}>
-            <GenericForm fields={selectedPage?.fields} requestUrl={requestUrl} onSubmitCloseModal={toggleModal} />
+            <GenericForm fields={selectedPage?.fields} requestUrl={requestUrl} onSubmitCloseModal={onSubmitCloseModal} />
           </Modal>
         </>
       ) : (

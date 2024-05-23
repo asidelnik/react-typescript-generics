@@ -7,6 +7,8 @@
 2. Add the interface to the **IDataUnion** interface in the IUnion.ts file
 3. Add a **page object** to the **pagesMetaData** array in the pagesMetaData.ts file
 
+<img width="1602" alt="image" src="https://github.com/asidelnik/database-connection-manager/assets/10272524/aaa331bc-2b98-42f5-9731-6c29418367c8">
+
 
 ## Database Connection Manager
 

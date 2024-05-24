@@ -1,7 +1,7 @@
 # Velotix - Front-End Developer Interview Task
 
 ## Links
-- [Demos site](https://asidelnik.github.io/database-connection-manager/#/databases/items)
+- [Demo site](https://asidelnik.github.io/database-connection-manager/#/databases/items)
 - [Server for demo site](https://github.com/asidelnik/database-connection-manager-server)
   
 ## Generic table & form components

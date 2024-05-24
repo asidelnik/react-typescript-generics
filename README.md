@@ -4,7 +4,7 @@
 - [Demo site](https://asidelnik.github.io/database-connection-manager/#/databases/items)
 - [Server for demo site](https://github.com/asidelnik/database-connection-manager-server)
   
-## Generic table & form components
+## React Typescript website - generic tables & forms
 ### Dev tasks to add a page:
 
 1. Add an **interface** with the **page's fields** (like IDatabase)

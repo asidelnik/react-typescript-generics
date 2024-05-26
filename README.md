@@ -15,13 +15,13 @@
 <img width="1602" alt="image" src="https://github.com/asidelnik/database-connection-manager/assets/10272524/aaa331bc-2b98-42f5-9731-6c29418367c8">
 
 ### Possible improvements:
-1. SSR - implement in project (with json-server?)
-2. TanStack - implement in project
-2.1. Query
-2.2. Router
-2.3. Table
-2.4. Pagination, filtering, & sorting
-2.5. Form
+- [ ] - 1. SSR - implement in project (with json-server?)
+- [ ] - 2. TanStack - implement in project
+  - [ ] - 2.1. Query
+  - [ ] - 2.2. Router
+  - [ ] - 2.3. Table
+  - [ ] - 2.4. Pagination, filtering, & sorting
+  - [ ] - 2.5. Form
 
 ## Database Connection Manager
 

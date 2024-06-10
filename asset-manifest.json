@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/database-connection-manager/static/css/main.18d25991.css",
-    "main.js": "/database-connection-manager/static/js/main.f54d40b5.js",
-    "index.html": "/database-connection-manager/index.html",
-    "main.18d25991.css.map": "/database-connection-manager/static/css/main.18d25991.css.map",
-    "main.f54d40b5.js.map": "/database-connection-manager/static/js/main.f54d40b5.js.map"
+    "main.css": "/react-typescript-generics/static/css/main.18d25991.css",
+    "main.js": "/react-typescript-generics/static/js/main.f54d40b5.js",
+    "index.html": "/react-typescript-generics/index.html",
+    "main.18d25991.css.map": "/react-typescript-generics/static/css/main.18d25991.css.map",
+    "main.f54d40b5.js.map": "/react-typescript-generics/static/js/main.f54d40b5.js.map"
   },
   "entrypoints": [
     "static/css/main.18d25991.css",

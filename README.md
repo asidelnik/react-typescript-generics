@@ -2,7 +2,7 @@
 Generic routing, tables & forms. Custom Hooks.
 
 ## Links
-- [Demo site](https://asidelnik.github.io/database-connection-manager/#/databases/items)
+- [Demo site](https://asidelnik.github.io/react-typescript-generics/#/databases/items)
 - [Server for demo site](https://github.com/asidelnik/database-connection-manager-server)
 
 ## Dev tasks to add a page:

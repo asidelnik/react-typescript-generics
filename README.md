@@ -1,4 +1,5 @@
-# React Typescript website - generic tables & forms
+# React Typescript website
+Generic routing, tables & forms. Custom Hooks.
 
 ## Links
 - [Demo site](https://asidelnik.github.io/database-connection-manager/#/databases/items)

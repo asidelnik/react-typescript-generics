@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/database-connection-manager/static/css/main.18d25991.css",
+    "main.js": "/database-connection-manager/static/js/main.f54d40b5.js",
+    "index.html": "/database-connection-manager/index.html",
+    "main.18d25991.css.map": "/database-connection-manager/static/css/main.18d25991.css.map",
+    "main.f54d40b5.js.map": "/database-connection-manager/static/js/main.f54d40b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18d25991.css",
+    "static/js/main.f54d40b5.js"
+  ]
+}

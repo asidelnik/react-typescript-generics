@@ -5,7 +5,7 @@
 **[Demo site link](https://asidelnik.github.io/react-typescript-generics/#/databases/items)**
 
 ## FrontEnd tasks to add a page
-1. Add an **interface** with the page data fields (Ex: [IDatabase.ts](https://github.com/asidelnik/react-typescript-generics/blob/b07e5e1f3bad378d2dadf1d7c9c8b8938738e65e/src/interfaces/IDatabase.ts)
+1. Add an **interface** with the page data fields (Ex: [IDatabase.ts](https://github.com/asidelnik/react-typescript-generics/blob/b07e5e1f3bad378d2dadf1d7c9c8b8938738e65e/src/interfaces/IDatabase.ts))
 2. [IUnion.ts](https://github.com/asidelnik/react-typescript-generics/blob/b07e5e1f3bad378d2dadf1d7c9c8b8938738e65e/src/interfaces/IUnion.ts#L5) - add the interface to the **IDataUnion** interface
 3. [pagesMetaData.ts](https://github.com/asidelnik/react-typescript-generics/blob/b07e5e1f3bad378d2dadf1d7c9c8b8938738e65e/src/constants/pagesMetaData.ts#L4) - add a **page object** to the **pagesMetaData** array
 
